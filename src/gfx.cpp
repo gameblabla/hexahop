@@ -137,14 +137,14 @@ void InitScreen()
 	realScreen = SDL_SetVideoMode(
 		SCREEN_W, SCREEN_H, // Width, Height
 		0, // Current BPP
-		SDL_SWSURFACE | SDL_DOUBLEBUF | (fullscreen ? SDL_FULLSCREEN : 0) );
+		SDL_HWSURFACE | SDL_TRIPLEBUF | (fullscreen ? SDL_FULLSCREEN : 0) );
 #endif
 
 	if (screen)
 		SDL_FreeSurface(screen);
 
 	SDL_Surface* tempscreen = SDL_CreateRGBSurface(
-		SDL_SWSURFACE, 
+		SDL_HWSURFACE, 
 		SCREEN_W, SCREEN_H,
 		16, 0xf800, 0x07e0, 0x001f, 0);
 

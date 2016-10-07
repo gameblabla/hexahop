@@ -9,10 +9,10 @@ DATADIR = "./data"
 
 # change compilation / linking flag options
 F_OPTS		= -Isrc  -DRELATIVE_PATHS
-CC_OPTS		= -O3 -fdata-sections -ffunction-sections -mips32r2 $(F_OPTS)
-CFLAGS		= $(shell sdl-config --cflags) $(CC_OPTS)
+CC_OPTS		= -Ofast -fdata-sections -ffunction-sections -mips32r2 $(F_OPTS)
+CFLAGS		=  $(CC_OPTS)
 CXXFLAGS	=$(CFLAGS) 
-LDFLAGS     = -lSDLmain -lSDL -lm -flto -lSDL_mixer -lSDL_ttf -lstdc++ -Wl,--as-needed -Wl,--gc-sections -flto -s
+LDFLAGS     = -lSDLmain -lSDL -lm -lSDL_mixer -lSDL_ttf -lstdc++ -Wl,--as-needed -Wl,--gc-sections -flto -s
 
 # Files to be compiled
 SRCDIR    = ./src
