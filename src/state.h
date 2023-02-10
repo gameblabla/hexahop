@@ -19,9 +19,9 @@
 #ifndef __HHOP_STATE_H__
 #define __HHOP_STATE_H__
 
-#include <SDL.h>
+#include <SDL/SDL.h>
 #ifdef USE_OPENGL
-#include <SDL_OpenGL.h>
+#include <SDL/SDL_OpenGL.h>
 #endif
 #include <math.h>
 #include <stdlib.h>

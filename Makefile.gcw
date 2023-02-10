@@ -1,15 +1,15 @@
 PRGNAME     = hexahop
 
 # define regarding OS, which compiler to use
-CC          = mipsel-linux-gcc
-CCP         = mipsel-linux-g++
-LD          = mipsel-linux-gcc
+CC          = /opt/gcw0-toolchain/bin/mipsel-linux-gcc
+CCP         = /opt/gcw0-toolchain/bin/mipsel-linux-g++
+LD          = /opt/gcw0-toolchain/bin/mipsel-linux-gcc
 
 DATADIR = "./data"
 
 # change compilation / linking flag options
 F_OPTS		= -Isrc  -DRELATIVE_PATHS
-CC_OPTS		= -Ofast -fdata-sections -ffunction-sections -mips32r2 $(F_OPTS)
+CC_OPTS		= -Ofast -fdata-sections -ffunction-sections -mips32r2 -flto $(F_OPTS)
 CFLAGS		=  $(CC_OPTS)
 CXXFLAGS	=$(CFLAGS) 
 LDFLAGS     = -lSDLmain -lSDL -lm -lSDL_mixer -lSDL_ttf -lstdc++ -Wl,--as-needed -Wl,--gc-sections -flto -s

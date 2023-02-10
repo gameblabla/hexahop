@@ -9,7 +9,7 @@
 
 #ifndef ENABLE_PANGO
 
-#include <SDL_ttf.h>
+#include <SDL/SDL_ttf.h>
 
 static TTF_Font* font;
 

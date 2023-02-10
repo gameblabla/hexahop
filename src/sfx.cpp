@@ -20,7 +20,7 @@
 #include <list>
 #include <vector>
 #include <ctime>
-#include <SDL_mixer.h>
+#include <SDL/SDL_mixer.h>
 #include "sfx.h"
 #include "system-directory.h"
 
